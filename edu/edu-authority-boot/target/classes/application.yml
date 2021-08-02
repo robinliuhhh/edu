@@ -1,0 +1,29 @@
+server:
+  # ����˿ں�
+  port: 8003
+spring:
+  application:
+    # �������� - ����֮��ʹ�����ƽ���ͨѶ
+    name: edu-authority-boot
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://192.168.11.128:3306/edu_user?useUnicode=true&characterEncoding=utf8&serverTimezone=UTC
+    username: root
+    password: Robin@666
+  redis:
+    host: 192.168.11.128
+    port: 6379
+eureka:
+  client:
+    service-url:
+      # ��дע�����ķ�������ַ
+      defaultZone: http://localhost:7001/eureka
+    # �Ƿ���Ҫ���Լ�ע�ᵽע������
+    register-with-eureka: true
+    # �Ƿ���Ҫ����������Ϣ
+    fetch-registry: true
+  instance:
+    # ʹ��ip��ַע�ᵽע������
+    prefer-ip-address: true
+    # ע�������б�����ʾ��״̬����
+    instance-id: ${spring.cloud.client.ip-address}:${server.port}
