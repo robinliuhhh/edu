@@ -1,0 +1,6 @@
+com\robin\eduadboot\mapper\AdDao.class
+com\robin\eduadboot\controller\AdController.class
+com\robin\eduadboot\entity\PromotionAd.class
+com\robin\eduadboot\EduAdBootApplication.class
+com\robin\eduadboot\service\AdService.class
+com\robin\eduadboot\service\impl\AdServiceImpl.class
